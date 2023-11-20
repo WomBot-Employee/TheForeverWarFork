@@ -9,6 +9,7 @@ public class FPSController : MonoBehaviour
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
+    public float climbSpeed = 3f;
     public float gravity = 10f;
 
     public float lookSpeed = 2f;
@@ -29,6 +30,21 @@ public class FPSController : MonoBehaviour
     // Additional variables for fading effect
     private Vector3 cameraVelocity = Vector3.zero;
     public float cameraFadeSpeed = 5f;
+
+    public bool IsClimbing { get; private set; }
+
+    public void ClimbLadder(float climbSpeed)
+    {
+        IsClimbing = true;
+        moveDirection.y = Input.GetAxis("Vertical") * climbSpeed;
+    }
+
+    public void StopClimbing()
+    {
+        IsClimbing = false;
+        moveDirection.y = 0f;
+    }
+
 
     void Start()
     {
@@ -93,5 +109,21 @@ public class FPSController : MonoBehaviour
         #endregion
 
         Application.targetFrameRate = 60;
+
+        if (IsClimbing)
+        {
+            // Disable standard movement and rotation while climbing
+            canMove = false;
+
+            // Handle ladder climbing
+            characterController.Move(moveDirection * Time.deltaTime);
+        }
+        else
+        {
+            // Enable standard movement and rotation
+            canMove = true;
+        }
+
     }
+    
 }
