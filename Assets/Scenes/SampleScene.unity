@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: castl
       objectReference: {fileID: 0}
+    - target: {fileID: 4321514657177891973, guid: 663b16f2eaa59bd44ab1b9e29c24dc23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b0f68476c22f4843be8d3ecb51c1e61, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9606,7 +9610,7 @@ Transform:
   m_GameObject: {fileID: 810978726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 147.3, y: 150.5, z: 756.6}
+  m_LocalPosition: {x: 144.14, y: 132.3, z: 712.56}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14429,6 +14433,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: db43e32d1ee98414f927a5d1210b097c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 24560c0a88825fe429fb8008ac5c2efa, type: 2}
     - target: {fileID: 919132149155446097, guid: db43e32d1ee98414f927a5d1210b097c, type: 3}
       propertyPath: m_Name
       value: no bevel text fix
